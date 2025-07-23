@@ -4,7 +4,7 @@ pipeline {
     environment {
         JAVA_HOME = tool 'JDK17'
         PATH = "${JAVA_HOME}/bin:${env.PATH}"
-        GRADLE_OPTS = "-Dheadless.mode=true"
+        //GRADLE_OPTS = "-Dheadless.mode=false"
     }
 
     triggers {
@@ -56,10 +56,10 @@ pipeline {
             archiveArtifacts artifacts: '**/target/site/serenity/**/*.*', fingerprint: true
         }
         failure {
-            echo '❌ Fallaron las pruebas.'
+            echo 'Fallaron las pruebas.'
         }
         success {
-            echo '✅ Pruebas ejecutadas correctamente.'
+            echo 'Pruebas ejecutadas correctamente.'
         }
     }
 }

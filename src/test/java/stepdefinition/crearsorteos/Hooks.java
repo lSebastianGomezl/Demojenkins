@@ -37,6 +37,7 @@ public class Hooks {
             options.addArguments("--start-maximized");
             //options.addArguments("--force-device-scale-factor=0.75");
         }
+        System.out.println("valor de headless: " + isHeadless );
 
         options.addArguments(
                 "--lang=es",
