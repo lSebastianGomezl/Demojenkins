@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    id 'net.serenity-bdd.serenity-gradle-plugin' version '3.7.0'
+}
+
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    serenityVersion = '3.7.0'
+    cucumberVersion = '7.14.0'
+}
+
+dependencies {
+    implementation "net.serenity-bdd:serenity-core:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-cucumber:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-junit:${serenityVersion}"
+
+    testImplementation "io.cucumber:cucumber-java:${cucumberVersion}"
+    testImplementation "io.cucumber:cucumber-junit:${cucumberVersion}"
+    testImplementation "io.cucumber:cucumber-core:${cucumberVersion}"
+
+    implementation "org.seleniumhq.selenium:selenium-java:4.8.3"
+    implementation 'io.github.bonigarcia:webdrivermanager:5.8.0'
+    testImplementation 'ch.qos.logback:logback-classic:1.2.11'
+    testImplementation "junit:junit:4.13.2"
+
+}
+
+test {
+    useJUnit()
+
+    // Borrar reportes antes de cada ejecución
+    doFirst {
+        delete fileTree("target/site/serenity")
+    }
+}
