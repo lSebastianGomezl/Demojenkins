@@ -2,8 +2,7 @@ pipeline {
     agent any
 
     environment {
-        JAVA_HOME = tool 'JDK 17'
-        PATH = "${JAVA_HOME}\\bin;${env.PATH}"  // Uso de \\ y ; para Windows
+        JAVA_HOME = tool name: 'JDK 17', type: 'jdk'
         TEST_CLASS = "runners.crearsorteo.RunnerCrearSorteo"
     }
 
@@ -21,6 +20,14 @@ pipeline {
         stage('Clonar código') {
             steps {
                 git url: 'https://github.com/lSebastianGomezl/Demojenkins.git', branch: 'main'
+            }
+        }
+
+        stage('Set JAVA_HOME y PATH') {
+            steps {
+                script {
+                    env.PATH = "${JAVA_HOME}\\bin;${env.PATH}"
+                }
             }
         }
 
