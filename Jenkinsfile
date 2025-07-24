@@ -28,7 +28,9 @@ pipeline {
             ansiColor('xterm') {
                 sh '''
                     chmod +x gradlew
-                    ./gradlew dependencies
+                '''
+                sh '''
+                    ./gradlew clean build -x test' // Compila sin correr pruebas
                 '''
             }
         }
