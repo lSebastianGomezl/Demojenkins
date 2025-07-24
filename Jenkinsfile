@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         JAVA_HOME = tool 'JDK 17'
-        PATH = "${JAVA_HOME}/bin:${env.PATH}"
+        PATH = "${JAVA_HOME}\\bin;${env.PATH}"  // Uso de \\ y ; para Windows
         TEST_CLASS = "runners.crearsorteo.RunnerCrearSorteo"
     }
 
@@ -27,8 +27,7 @@ pipeline {
         stage('Ejecutar pruebas específicas') {
             steps {
                 ansiColor('xterm') {
-                    sh 'chmod +x gradlew'
-                    sh "./gradlew clean test --tests \"$TEST_CLASS\""
+                    bat "gradlew.bat clean test --tests \"%TEST_CLASS%\""
                 }
             }
         }
