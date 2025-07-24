@@ -52,18 +52,7 @@ pipeline {
                 junit '**/target/site/serenity/*.xml'
                 archiveArtifacts artifacts: '**/target/site/serenity/**/*.*', fingerprint: true
             }
-
-            emailext(
-                subject: "Resultado del job: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                body: """<p>Hola equipo,</p>
-                         <p>El job <b>${env.JOB_NAME}</b> ha finalizado con estado: <b>${currentBuild.currentResult}</b>.</p>
-                         <p>Ver <a href="${env.BUILD_URL}target/site/serenity/index.html">reporte Serenity</a>.</p>""",
-                mimeType: 'text/html',
-                to: 'cupmi009@gmail.com',
-                attachLog: true
-            )
         }
-
 
         failure {
             echo 'Fallaron las pruebas.'
