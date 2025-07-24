@@ -23,11 +23,16 @@ pipeline {
             }
         }
 
-        stage('Instalar dependencias') {
-            steps {
-                sh './gradlew dependencies'
+    stage('Instalar dependencias') {
+        steps {
+            ansiColor('xterm') {
+                sh '''
+                    chmod +x gradlew
+                    ./gradlew dependencies
+                '''
             }
         }
+    }
 
         stage('Ejecutar pruebas') {
             steps {
