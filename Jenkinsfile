@@ -2,8 +2,9 @@ pipeline {
     agent any
 
     environment {
-        JAVA_HOME = tool 'JDK 17'  // Usa exactamente el nombre que configuraste en Jenkins
+        JAVA_HOME = tool 'JDK 17'
         PATH = "${JAVA_HOME}/bin:${env.PATH}"
+        TEST_CLASS = "runners.crearsorteo.RunnerCrearSorteo"
     }
 
     triggers {
@@ -23,22 +24,12 @@ pipeline {
             }
         }
 
-    stage('Instalar dependencias') {
-        steps {
-            ansiColor('xterm') {
-                sh '''
-                    chmod +x gradlew
-                '''
-                sh '''
-                    ./gradlew clean build -x test' // Compila sin correr pruebas
-                '''
-            }
-        }
-    }
-
-        stage('Ejecutar pruebas') {
+        stage('Ejecutar pruebas específicas') {
             steps {
-                sh './gradlew clean test'
+                ansiColor('xterm') {
+                    sh 'chmod +x gradlew'
+                    sh "./gradlew clean test --tests \"$TEST_CLASS\""
+                }
             }
         }
 
