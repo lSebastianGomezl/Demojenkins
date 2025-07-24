@@ -52,22 +52,17 @@ pipeline {
                 junit '**/target/site/serenity/*.xml'
                 archiveArtifacts artifacts: '**/target/site/serenity/**/*.*', fingerprint: true
             }
-        }
 
-    post {
-        always {
-            emailext (
+            emailext(
                 subject: "Resultado del job: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                body: """Hola equipo,
-
-    El job ${env.JOB_NAME} ha finalizado con estado: ${currentBuild.currentResult}.
-    Ver detalles en: ${env.BUILD_URL}target/site/serenity/index.html
-    """,
-                to: 'sebastian.gomez@dcsas.com.co',
+                body: """<p>Hola equipo,</p>
+                         <p>El job <b>${env.JOB_NAME}</b> ha finalizado con estado: <b>${currentBuild.currentResult}</b>.</p>
+                         <p>Ver <a href="${env.BUILD_URL}target/site/serenity/index.html">reporte Serenity</a>.</p>""",
+                mimeType: 'text/html',
+                to: 'tucorreo@dominio.com',
                 attachLog: true
             )
         }
-    }
 
 
         failure {
