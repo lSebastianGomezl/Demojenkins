@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c07d4157-c685-4ee3-8fcc-709ad059e0c4" name="Changes" comment="" />
+    <list default="true" id="c07d4157-c685-4ee3-8fcc-709ad059e0c4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +39,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -51,13 +56,14 @@
     "Gradle.Build GeneradorDeSorteosVirtuales.executor": "Run",
     "Gradle.LoginRunner (1).executor": "Run",
     "Gradle.LoginRunner.executor": "Run",
-    "Gradle.RunnerCrearSorteo.executor": "Debug",
+    "Gradle.RunnerCrearSorteo.executor": "Run",
     "Gradle.RunnerLogin.executor": "Run",
     "JUnit.Main.executor": "Run",
     "JUnit.Main.login.executor": "Run",
     "JUnit.RunnerCrearSorteo.executor": "Run",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/sebastian.gomez/OneDrive - GRUPO EMPRESARIAL EN LINEA S.A/Escritorio/Laboratorio/PruebaTecnica",
+    "last_opened_file_path": "C:/Users/sebastian.gomez/OneDrive - GRUPO EMPRESARIAL EN LINEA S.A/Documentos/GeneradorDeSorteosVirtuales",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0"
@@ -65,6 +71,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\GeneradorDeSorteosVirtuales" />
       <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\FlutterWeb\DemoAppClientes\src\test\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -96,7 +103,7 @@
             <option value="&quot;runners.crearsorteo.RunnerCrearSorteo&quot;" />
           </list>
         </option>
-        <option name="vmOptions" value="-Dheadless.mode=true" />
+        <option name="vmOptions" value="-Dheadless.mode=true " />
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
@@ -231,7 +238,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/stepdefinition/crearsorteos/Hooks.java</url>
-          <line>25</line>
+          <line>27</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
