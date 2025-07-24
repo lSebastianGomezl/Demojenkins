@@ -2,9 +2,8 @@ pipeline {
     agent any
 
     environment {
-        JAVA_HOME = tool 'JDK17'
+        JAVA_HOME = tool 'JDK 17'  // Usa exactamente el nombre que configuraste en Jenkins
         PATH = "${JAVA_HOME}/bin:${env.PATH}"
-        //GRADLE_OPTS = "-Dheadless.mode=false"
     }
 
     triggers {
@@ -52,8 +51,10 @@ pipeline {
 
     post {
         always {
-            junit '**/target/site/serenity/*.xml'
-            archiveArtifacts artifacts: '**/target/site/serenity/**/*.*', fingerprint: true
+            script {
+                junit '**/target/site/serenity/*.xml'
+                archiveArtifacts artifacts: '**/target/site/serenity/**/*.*', fingerprint: true
+            }
         }
         failure {
             echo 'Fallaron las pruebas.'
