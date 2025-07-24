@@ -59,7 +59,7 @@ pipeline {
                          <p>El job <b>${env.JOB_NAME}</b> ha finalizado con estado: <b>${currentBuild.currentResult}</b>.</p>
                          <p>Ver <a href="${env.BUILD_URL}target/site/serenity/index.html">reporte Serenity</a>.</p>""",
                 mimeType: 'text/html',
-                to: 'tucorreo@dominio.com',
+                to: 'sebastian.gomez@dcsas.com.co',
                 attachLog: true
             )
         }
