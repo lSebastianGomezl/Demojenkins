@@ -53,6 +53,23 @@ pipeline {
                 archiveArtifacts artifacts: '**/target/site/serenity/**/*.*', fingerprint: true
             }
         }
+
+    post {
+        always {
+            emailext (
+                subject: "Resultado del job: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                body: """Hola equipo,
+
+    El job ${env.JOB_NAME} ha finalizado con estado: ${currentBuild.currentResult}.
+    Ver detalles en: ${env.BUILD_URL}target/site/serenity/index.html
+    """,
+                to: 'sebastian.gomez@dcsas.com.co',
+                attachLog: true
+            )
+        }
+    }
+
+
         failure {
             echo 'Fallaron las pruebas.'
         }
@@ -60,4 +77,5 @@ pipeline {
             echo 'Pruebas ejecutadas correctamente.'
         }
     }
+
 }
