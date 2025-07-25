@@ -20,7 +20,7 @@ public class PaginaPrincipal extends PageObject {
     public static final Target BTN_SING_IN_RECUPERAR = Target.the("Boton iniciar sesion recuperar").located(By.xpath("//button[contains(@class,'btn-login2')]"));
     public static final Target BTN_INGRESAR_HUELLA = Target.the("Boton ingresar huella").located(By.xpath("//span[contains(text(),'Aceptar')]"));
     public static final Target BTN_CANCELAR_HUELLA = Target.the("Boton cancelar huella").located(By.xpath("//span[contains(text(),'Cancelar')]"));
-    public static final Target BTN_ACEPTAR_HUELLA = Target.the("Boton iniciar huella").located(By.xpath("//*[contains(@class,'btn btn_modal_bio_acep')]"));
+    public static final Target BTN_ACEPTAR_HUELLA = Target.the("Boton iniciar huella").located(By.xpath("//button[span[contains(text(),'Aceptar')]]"));
     public static final Target INDICADOR_CARGANDO_HUELLA = Target.the("indicador de que la huella esta cargando").located(By.xpath("//*[contains(@class,'rotate-svg')]"));
     public static final Target BTN_ACEPT = Target.the("Boton Aceptar").located(By.xpath("//button[contains(text(),'ACEPTAR')]"));
     public static final Target HOME_VALIDATION = Target.the("Verificar ingreso").located(By.xpath("//span[contains(text(),'Inicio')]"));

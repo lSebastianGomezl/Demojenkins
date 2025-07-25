@@ -2,6 +2,7 @@ package stepdefinition.crearsorteos;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.Before;
+import io.cucumber.java.PendingException;
 import io.cucumber.java.es.*;
 import models.DatosUsuario;
 import net.serenitybdd.core.Serenity;
@@ -15,6 +16,7 @@ import tasks.crearsorteo.ClicConfiguracionSorteoslTask;
 import tasks.crearsorteo.ClicGestorSorteoVirtualTask;
 import tasks.crearsorteo.formulario.*;
 import tasks.login.*;
+import utils.EscenarioNegativoValidadoException;
 import utils.GeneradorDatos;
 
 import java.util.HashMap;
@@ -22,20 +24,25 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static org.junit.Assume.assumeTrue;
 
 public class CrearSorteoStepDefinition {
     private static final Logger LOGGER = Logger.getLogger(LoginStepDefinition.class.getName());
     private Map<String, String> datosDinamicos = new HashMap<>();
+    private boolean validarFechaInvalida = false;
 
     @Before
     public void prepararDatosDinamicos() {
         String nombreSorteo = GeneradorDatos.nombreDeSorteoUnico();
         String codigoUnico = GeneradorDatos.codigoUnico();
         String fechaActual = GeneradorDatos.fechaActual();
+        String fechaInvalida = GeneradorDatos.fechaAnterior();
+
 
         Serenity.setSessionVariable("nombreSorteo").to(nombreSorteo);
         Serenity.setSessionVariable("codigoUnico").to(codigoUnico);
         Serenity.setSessionVariable("fechaActual").to(fechaActual);
+        Serenity.setSessionVariable("fechaInvalida").to(fechaInvalida);
     }
 
     private String valor(String input) {
@@ -46,6 +53,8 @@ public class CrearSorteoStepDefinition {
                 return Serenity.sessionVariableCalled("codigoUnico");
             case "fechaActual":
                 return Serenity.sessionVariableCalled("fechaActual");
+            case "fechaInvalida":
+                return Serenity.sessionVariableCalled("fechaInvalida");
             default:
                 return input;
         }
@@ -59,6 +68,7 @@ public class CrearSorteoStepDefinition {
         );
         LOGGER.info("Actor activo: " + OnStage.theActorInTheSpotlight().getName());
     }
+
     @Dado("diligencia el formulario de login con los siguientes datos:")
     public void diligenciaElFormularioDeLoginConLosSiguientesDatos(DataTable dataTable) {
         Map<String, String> entry = dataTable.asMaps().get(0);
@@ -78,6 +88,7 @@ public class CrearSorteoStepDefinition {
                 IngresarDatosLoginTask.credenciales(usuario)
         );
     }
+
     @Dado("hace clic en el botón validar biometrico")
     public void haceClicEnElBotónValidarBiometrico() {
         LOGGER.info("==> Clic en el botón Validar Biométrico");
@@ -85,6 +96,7 @@ public class CrearSorteoStepDefinition {
                 ClicValidarBiometrico.on()
         );
     }
+
     @Dado("hace clic en el botón Iniciar sesión")
     public void haceClicEnElBotónIniciarSesión() {
         LOGGER.info("==> Clic en el botón Iniciar Sesión");
@@ -92,6 +104,7 @@ public class CrearSorteoStepDefinition {
                 ClicBtnIniciarSesion.on()
         );
     }
+
     @Dado("acepta la primera alerta")
     public void aceptaLaPrimeraAlerta() {
         LOGGER.info("==> Acepta la primera alerta (Huella)");
@@ -99,6 +112,7 @@ public class CrearSorteoStepDefinition {
                 ClicBtnAceptarHuella.on()
         );
     }
+
     @Dado("acepta la segunda alerta")
     public void aceptaLaSegundaAlerta() {
         LOGGER.info("==> Acepta la segunda alerta (Confirmación de huella)");
@@ -115,6 +129,7 @@ public class CrearSorteoStepDefinition {
                 ClicGestorSorteoVirtualTask.on(tituloMenu)
         );
     }
+
     @Cuando("selecciona el submenú {string}")
     public void seleccionaElSubmenú(String tituloSubmenu) {
         LOGGER.info("==> Ingresa al sub menu configuracion de sorteo");
@@ -122,6 +137,7 @@ public class CrearSorteoStepDefinition {
                 ClicConfiguracionSorteoslTask.on(tituloSubmenu)
         );
     }
+
     @Entonces("debería abrirse una nueva ventana con el buscador de sorteos {string}")
     public void deberíaAbrirseUnaNuevaVentanaConElBuscadorDeSorteos(String tituloEsperado) {
         LOGGER.info("==> Validando que se muestra la página: " + tituloEsperado);
@@ -129,6 +145,7 @@ public class CrearSorteoStepDefinition {
                 seeThat(PaginaDashboard.esVisible(tituloEsperado))
         );
     }
+
     @Cuando("el usuario hace clic en el botón {string}")
     public void elUsuarioHaceClicEnElBotón(String textoBoton) {
         LOGGER.info("==> Da clic en el boton de crear sorteo");
@@ -137,6 +154,7 @@ public class CrearSorteoStepDefinition {
                 ClicBtoCrearSorteoTask.conTexto(textoBoton)
         );
     }
+
     @Entonces("debería abrirse una nueva ventana con el formulario de creacion de sorteos y ver el texto {string}")
     public void deberíaAbrirseUnaNuevaVentanaConElFormularioDeCreacionDeSorteosYVerElTexto(String tituloFormulario) {
         LOGGER.info("==> Valida el titulo del fomulario informacion de sorteo");
@@ -145,6 +163,7 @@ public class CrearSorteoStepDefinition {
                 seeThat(PaginaCrearSorteo.tituloFormulario(tituloFormulario))
         );
     }
+
     @Cuando("selecciona la empresa propietaria {string}")
     public void seleccionaLaEmpresaPropietaria(String tituloEmpresa) {
         LOGGER.info("==> Selecciona el nombre de la empresa propietaria");
@@ -152,6 +171,7 @@ public class CrearSorteoStepDefinition {
                 SeleccionarEmpresaTask.empresaPropietaria(tituloEmpresa)
         );
     }
+
     @Cuando("ingresa el nombre del sorteo {string}")
     public void ingresaElNombreDelSorteo(String nombreSorteo) {
         LOGGER.info("==> Ingresa el nombre del sorteo");
@@ -159,6 +179,7 @@ public class CrearSorteoStepDefinition {
                 IngresarNombreSorteoTask.on(valor(nombreSorteo))
         );
     }
+
     @Cuando("ingresa el código único del sorteo {string}")
     public void ingresaElCódigoÚnicoDelSorteo(String codigoUnico) {
         LOGGER.info("==> Ingresa el codigo del sorteo");
@@ -166,6 +187,7 @@ public class CrearSorteoStepDefinition {
                 IngresarCodigoSorteoTask.on(valor(codigoUnico))
         );
     }
+
     @Cuando("selecciona el tipo de sorteo {string}")
     public void seleccionaElTipoDeSorteo(String tipoSorteo) {
         LOGGER.info("==> Ingresa el tipo de sorteo");
@@ -173,6 +195,7 @@ public class CrearSorteoStepDefinition {
                 SeleccionarTipoSorteoTask.tipoSorteo(tipoSorteo)
         );
     }
+
     @Cuando("escribe la descripción {string}")
     public void escribeLaDescripción(String descripcion) {
         LOGGER.info("==> Ingresa la descripcion del sorteo");
@@ -180,6 +203,7 @@ public class CrearSorteoStepDefinition {
                 IngresarDescripcionSorteoTask.on(descripcion)
         );
     }
+
     @Cuando("selecciona la fecha de inicio {string}")
     public void seleccionaLaFechaDeInicio(String fechaInicio) {
         LOGGER.info("==> Ingresa la fecha de inicio");
@@ -187,6 +211,7 @@ public class CrearSorteoStepDefinition {
                 IngresarFechaIncioTask.on(valor(fechaInicio))
         );
     }
+
     @Cuando("selecciona la fecha de fin {string}")
     public void seleccionaLaFechaDeFin(String fechaFin) {
         LOGGER.info("==> Ingresa la fecha fin");
@@ -194,6 +219,7 @@ public class CrearSorteoStepDefinition {
                 IngresarFechaFinalTask.on(valor(fechaFin))
         );
     }
+
     @Cuando("configura el parámetro de formato de sorteo {string}")
     public void configuraElParámetroDeFormatoDeSorteo(String formatoSorteo) {
         LOGGER.info("==> Selecciona el formato de sorteo");

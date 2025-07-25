@@ -62,5 +62,6 @@ public class Hooks {
             hisBrowser.quit();
         }
     }
+
 }
 

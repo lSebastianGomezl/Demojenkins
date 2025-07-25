@@ -16,7 +16,7 @@ Característica: Crear un sorteo en la plataforma GSV
     Y acepta la primera alerta
     Y acepta la segunda alerta
 
-  Esquema del escenario: Crear sorteo exitosamente
+  Esquema del escenario: Crear un sorteo en la plataforma GSV exitosa y validaciones
     Cuando el usuario ingresa al menú lateral "GSV"
     Y selecciona el submenú "Configuración de sorteos"
     Entonces debería abrirse una nueva ventana con el buscador de sorteos "GSV"
@@ -44,4 +44,26 @@ Característica: Crear un sorteo en la plataforma GSV
       | Empresa | Nombre de sorteo | Codigo unico     | Tipo de sorteo | Descripcion | Fecha de inicio | Fecha de fin | Parametro                   |Mensaje                                                                                                  |
       | GELSA   | dinamico         | autoincremental  | SORTEO         | Prueba      | fechaActual     | fechaActual  |  Código único del sorteo    | Configuración de sorteo creado exitosamente.                                                            |
       | GELSA   | dinamico         | COD1753300361435 | SORTEO         | Prueba      | fechaActual     | fechaActual  |  Código único del sorteo    | Error al guardar la configuración del sorteo. El código del sorteo ya existe para la compañía asociada. |
+
+  Esquema del escenario: Crear un sorteo con fecha final menor a la fecha incial
+    Cuando el usuario ingresa al menú lateral "GSV"
+    Y selecciona el submenú "Configuración de sorteos"
+    Entonces debería abrirse una nueva ventana con el buscador de sorteos "GSV"
+
+    Cuando el usuario hace clic en el botón "Crear Sorteo"
+    Entonces debería abrirse una nueva ventana con el formulario de creacion de sorteos y ver el texto "Información del sorteo"
+
+    Cuando selecciona la empresa propietaria "<Empresa>"
+    Y ingresa el nombre del sorteo "<Nombre de sorteo>"
+    Y ingresa el código único del sorteo "<Codigo unico>"
+    Y selecciona el tipo de sorteo "<Tipo de sorteo>"
+    Y escribe la descripción "<Descripcion>"
+    Y selecciona la fecha de inicio "<Fecha de inicio>"
+    Y selecciona la fecha de fin "<Fecha de fin>"
+    Entonces debería aparecer un modal de confirmación "<Mensaje>"
+
+    Ejemplos:
+      | Empresa | Nombre de sorteo | Codigo unico     | Tipo de sorteo | Descripcion | Fecha de inicio | Fecha de fin | Mensaje                                                 |
+      | GELSA   | dinamico         | autoincremental  | SORTEO         | Prueba      | fechaActual     | fechaInvalida| La fecha final no puede ser menor que la fecha de inicio|
+
 
