@@ -2,6 +2,9 @@ package ui;
 
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
+import utils.GeneradorDatos;
+
+import static utils.GeneradorDatos.obtenerDiaActual;
 
 public class ConfiguracionSorteo {
 
@@ -49,7 +52,82 @@ public class ConfiguracionSorteo {
                 .located(By.xpath("//div[contains(@class, 'p-toast-detail') and contains(normalize-space(.), '" + texto + "')]"));
     }
 
+    public static final Target CONSULTAR_CODIGO_UNICO = Target.the("consultar código único del sorteo")
+            .located(By.xpath("//input[@formcontrolname='code']"));
 
+    public static Target botonEditarSorteo(String codigoSorteo) {
+        return Target.the("botón editar del sorteo con código " + codigoSorteo)
+                .located(By.xpath("//tr[td[1][normalize-space()='" + codigoSorteo + "']]//i[@title='Editar']"));
+
+
+    }
+    public static Target botonSubMenu(String texto) {
+        return Target.the("botón con texto '" + texto + "'")
+                .located(By.xpath("//button[.//span[normalize-space()='" + texto + "']]"));
+    }
+
+    public static final Target CHECK_BOX = Target.the("check box unica fecha ")
+            .located(By.xpath("(//div[contains(@class, 'p-radiobutton-box')])[1]"));
+
+
+    public static final Target CHECK_BOX_MULTIPLES = Target.the("check box multiples fechas ")
+            .located(By.xpath("(//div[contains(@class, 'p-radiobutton-box')])[2]"));
+
+
+    public static final Target FECHA_SORTEO = Target.the("campo de fecha de sorteo")
+            .located(By.id("fechaSorteoUnicaFecha"));
+
+
+    public static final Target DIA_ACTUAL = Target.the("día actual del calendario")
+            .located(By.xpath("//td[not(contains(@class, 'p-datepicker-other-month'))]//span[contains(@class, 'p-ripple') and not(contains(@class, 'p-disabled')) and text()='"+ GeneradorDatos.obtenerDiaActual() +"']"));
+
+    public static final Target HORA_SORTEO = Target.the("campo de hora de sorteo")
+            .located(By.xpath("//input[@placeholder='Hora de sorteo']"));
+
+    public static final Target FECHA_RANGO_INICIAL = Target.the("fecha de rango inicial")
+            .located(By.id("fechaInicio"));
+
+    public static final Target FECHA_RANGO_FINAL = Target.the("fecha de rango final")
+            .located(By.id("fechaFin"));
+
+    public static final Target HORA_RANGO_INICIAL = Target.the("hora de rango inicial")
+            .located(By.xpath("(//input[@placeholder='Hora'])[1]"));
+
+    public static final Target HORA_RANGO_FINAL = Target.the("hora de rango final")
+            .located(By.xpath("(//input[@placeholder='Hora'])[2]"));
+
+    public static final Target ITEM_MES = Target.the("item de mes en la parametrizacion")
+            .located(By.xpath("//a[.//span[text()='Mes']]"));
+
+    public static final Target ITEM_DIAS = Target.the("item de mes en la parametrizacion")
+            .located(By.xpath("//a[.//span[text()='Días']]"));
+
+    public static Target MES_SIGUIENTE(int mesSiguiente) {
+        return Target.the("Mes siguiente")
+                .locatedBy("//p-checkbox[@ng-reflect-value='{0}']//div[contains(@class,'p-checkbox-box')]")
+                .of(String.valueOf(mesSiguiente));
+    }
+
+    public static final Target RADIO_SELECCIONADO_ULTIMO_DIA = Target.the("Radio button 'El último' seleccionado")
+            .located(By.xpath("//label[@for='ultimoDiaMes' and text()='El último día del mes']"));
+
+    public static final Target RADIO_SELECCIONADO_DIA_ESPECIFICO = Target.the("Radio button dia especifico")
+            .located(By.xpath("//input[@id='diasSemanaEspecificos']/ancestor::p-radiobutton//div[contains(@class,'p-radiobutton-box')]"));
+
+    public static Target DIA_SEMANA(String valor) {
+        return Target.the("Label del día de la semana " + valor)
+                .locatedBy("//label[@for='dia{0}']")
+                .of(valor);
+    }
+    public static final Target ITEM_HORAS = Target.the("Pestaña 'Horas'")
+            .located(By.xpath("//a[.//span[text()='Horas']]"));
+
+
+    public static Target HORA_ESPECIFICA(String hora) {
+        return Target.the("Checkbox de la hora " + hora)
+                .locatedBy("//label[@for='hora{0}']")
+                .of(hora);
+    }
 
 
 }

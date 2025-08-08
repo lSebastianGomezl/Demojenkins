@@ -1,4 +1,4 @@
-package stepdefinition.crearsorteos;
+package stepdefinition.hooks;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
