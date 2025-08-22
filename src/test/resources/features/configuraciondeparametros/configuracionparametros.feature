@@ -1,0 +1,55 @@
+# language: es
+
+Característica: Configuracion de sorteo en la plataforma GSV
+
+  Como un usuario autorizado
+  Quiero poder acceder a la programacion de sorteos desde el menú GSV
+  Para crear una nueva programacion sorteo diligenciando toda la información requerida
+
+  Antecedentes:
+    Dado que el actor abre la aplicación
+    Y diligencia el formulario de login con los siguientes datos:
+      | tipoDocumento        | usuario    | contrasenna |
+      | Cédula de ciudadanía | 52202665   | Bgta2025*@  |
+    Y hace clic en el botón validar biometrico
+    Y hace clic en el botón Iniciar sesión
+    Y acepta la primera alerta
+    Y acepta la segunda alerta
+
+  Esquema del escenario: Configuracion de parametros exitosa
+    Cuando el usuario ingresa al menú lateral "GSV"
+    Y selecciona el submenú "Configuración de Parámetros"
+    Y el usuario da clic en el botón "Nuevo parámetro"
+    #Cuando llena el campo "Empresa" con "GELSA"
+    Y llena el campo "tipoCampoFiltro" con "BOOLEAN"
+    Y llena el campo "tipoParametro" con "SORTEO"
+    Y llena el campo Clave del parámetro con "<Clave>"
+    Y llena el campo Nombre del parámetro con "<Parametro>"
+    Y llena el campo Descripcion con "<Descripcion>"
+    Y el usuario da clic en el botón "Guardar"
+    Y el usuario hace clic en "Aceptar" en el modal
+    Entonces debería aparecer un modal de confirmación "<Mensaje>"
+
+
+    Ejemplos:
+      |Mensaje                                              |Parametro                |Clave              |Descripcion     |
+      |Configuración de parámetros creada exitosamente      |autroincremental         |autoincremental    |autoincremental |
+
+  @002
+  Esquema del escenario: Consulta de configuracion de parametros exitosa
+    Cuando el usuario ingresa al menú lateral "GSV"
+    Y selecciona el submenú "Configuración de Parámetros"
+    #Y el usuario da clic en el botón "Nuevo parámetro"
+    #Cuando el usuario selecciona la empresa "GELSA"
+    Y el usuario da clic en el botón "Consultar"
+    Y el usuario da clic en el icono de editar
+    #Y el usuario hace clic en "Aceptar" en el modal
+    Y llena el campo Clave del parámetro con "<Clave>"
+    Y el usuario da clic en el botón "Guardar"
+    Y el usuario hace clic en "Aceptar" en el modal
+    Entonces debería aparecer un modal de confirmación "<Mensaje>"
+
+
+    Ejemplos:
+      |Mensaje                                              |Clave               |
+      |Configuración de parámetros creada exitosamente      |autoincremental     |

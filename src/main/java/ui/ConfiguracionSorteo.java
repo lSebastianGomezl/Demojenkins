@@ -50,7 +50,7 @@ public class ConfiguracionSorteo {
     public static Target validacionCracionSorteo(String texto) {
         return Target.the("botón con texto: " + texto)
                 .located(By.xpath("//div[contains(@class, 'p-toast-detail') and contains(normalize-space(.), '" + texto + "')]"));
-    }
+    }//div[contains(@class, 'p-toast-detail') and contains(., 'Configuración de parámetros')]
 
     public static final Target CONSULTAR_CODIGO_UNICO = Target.the("consultar código único del sorteo")
             .located(By.xpath("//input[@formcontrolname='code']"));

@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features ="src/test/resources/features/programacionsorteo",
         glue = {"stepdefinition.programacionsorteo", "stepdefinition.hooks"},
-        tags = "@002",
+        tags = "",
         snippets = CucumberOptions.SnippetType.CAMELCASE)
 public class RunnerProgramacionSorteo {
 }

@@ -19,3 +19,4 @@ Característica: Login en la aplicación BackOffice
    Ejemplos:
      | mensaje   |
      | Dashboard |
+
