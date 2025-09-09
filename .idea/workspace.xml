@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c07d4157-c685-4ee3-8fcc-709ad059e0c4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/ConfiguracionSorteo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/ConfiguracionSorteo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/crearsorteo/RunnerCrearSorteo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/crearsorteo/RunnerCrearSorteo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/login/RunnerLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/login/RunnerLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/programacionsorteo/RunnerProgramacionSorteo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/programacionsorteo/RunnerProgramacionSorteo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/login/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/login/login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/GeneradorDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/GeneradorDatos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +42,18 @@
                 <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
                 <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="GeneradorDeSorteosVirutales" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="runtimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="GeneradorDeSorteosVirutales" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="testCompileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -72,32 +79,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build DemoAppClientes.executor": "Run",
-    "Gradle.Build GeneradorDeSorteosVirtuales.executor": "Run",
-    "Gradle.LoginRunner (1).executor": "Run",
-    "Gradle.LoginRunner.executor": "Run",
-    "Gradle.RunnerConfiguracionParametros.executor": "Run",
-    "Gradle.RunnerCrearSorteo.executor": "Run",
-    "Gradle.RunnerLogin.executor": "Run",
-    "Gradle.RunnerProgramacionSorteo.executor": "Run",
-    "JUnit.Main.executor": "Run",
-    "JUnit.Main.login.executor": "Run",
-    "JUnit.RunnerCrearSorteo.executor": "Run",
-    "JUnit.RunnerProgramacionSorteo.executor": "Debug",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/sebastian.gomez/OneDrive - GRUPO EMPRESARIAL EN LINEA S.A/Documentos/GeneradorDeSorteosVirtuales/src/test/resources/features/configuraciondeparametros",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.44312027",
-    "settings.editor.selected.configurable": "File.Encoding"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build DemoAppClientes.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build GeneradorDeSorteosVirtuales.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginRunner (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginRunner.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RunnerConfiguracionParametros.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RunnerCrearSorteo.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RunnerCrearTipoBalota.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RunnerLogin.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RunnerProgramacionSorteo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Main.login.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RunnerCrearSorteo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RunnerProgramacionSorteo.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sebastian.gomez/OneDrive - GRUPO EMPRESARIAL EN LINEA S.A/Documentos/PracticaAutomatizacion&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.44312027&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\GeneradorDeSorteosVirtuales\src\test\resources\features\creaciontipobalota" />
       <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\GeneradorDeSorteosVirtuales\src\test\resources\features\configuraciondeparametros" />
       <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\GeneradorDeSorteosVirtuales\src\test\resources\features\programacionsorteos" />
       <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\GeneradorDeSorteosVirtuales" />
@@ -108,14 +117,14 @@
       <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\BACK UP DISCO D\desk\FlutterWeb\DemoAppClientes\src\test\resources\features\login" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="tasks.configuracionparametros" />
-      <recent name="questions.configuracionparametros" />
-      <recent name="stepdefinition.configuracionparametros" />
-      <recent name="runners.configuracionparametros" />
-      <recent name="tasks.configuracionsorteo" />
+      <recent name="tasks.creartipobalota" />
+      <recent name="questions.crartipobalota" />
+      <recent name="tasks.creartipobalota.formulario" />
+      <recent name="runners.creartipobalota" />
+      <recent name="stepdefinition.creaciontipobalota" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RunnerConfiguracionParametros">
+  <component name="RunManager" selected="Gradle.RunnerCrearTipoBalota">
     <configuration name="RunnerConfiguracionParametros" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -140,7 +149,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RunnerCrearSorteo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RunnerCrearTipoBalota" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -153,10 +162,10 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;runners.crearsorteo.RunnerCrearSorteo&quot;" />
+            <option value="&quot;runners.creartipobalota.RunnerCrearTipoBalota&quot;" />
           </list>
         </option>
-        <option name="vmOptions" value="-Dheadless.mode=true " />
+        <option name="vmOptions" />
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
@@ -188,7 +197,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RunnerProgramacionSorteo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RunnerProgramacionSorteo" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -236,19 +245,18 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.RunnerConfiguracionParametros" />
       <item itemvalue="Gradle.RunnerProgramacionSorteo" />
-      <item itemvalue="Gradle.RunnerCrearSorteo" />
+      <item itemvalue="Gradle.RunnerCrearTipoBalota" />
+      <item itemvalue="Gradle.RunnerConfiguracionParametros" />
       <item itemvalue="Gradle.RunnerLogin" />
       <item itemvalue="JUnit.RunnerProgramacionSorteo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.RunnerCrearTipoBalota" />
         <item itemvalue="Gradle.RunnerConfiguracionParametros" />
         <item itemvalue="Gradle.RunnerLogin" />
-        <item itemvalue="Gradle.RunnerProgramacionSorteo" />
         <item itemvalue="JUnit.RunnerProgramacionSorteo" />
-        <item itemvalue="Gradle.RunnerCrearSorteo" />
       </list>
     </recent_temporary>
   </component>
@@ -320,6 +328,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/tasks/configuracionparametros/ClicIconoEditarTask.java</url>
           <line>21</line>
           <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/questions/crartipobalota/PaginaCrearTipoBalota.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

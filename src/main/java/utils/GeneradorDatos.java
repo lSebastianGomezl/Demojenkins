@@ -13,7 +13,7 @@ import java.util.UUID;
 public class GeneradorDatos {
 
     public static String nombreDeSorteoUnico() {
-        return "Sorteo_" + UUID.randomUUID().toString().substring(0, 8);
+        return "Aleatorio_" + UUID.randomUUID().toString().substring(0, 8);
     }
 
     public static String codigoUnico() {
