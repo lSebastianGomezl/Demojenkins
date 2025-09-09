@@ -1,5 +1,5 @@
 # language: es
-
+#H01
 Característica: Crear un sorteo en la plataforma GSV
 
   Como un usuario autorizado

@@ -5,6 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c07d4157-c685-4ee3-8fcc-709ad059e0c4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/questions/crartipobalota/PaginaCrearTipoBalota.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasks/creartipobalota/ClicBtoAgregarParametroTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasks/creartipobalota/ClicBtoGuardarTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasks/creartipobalota/ClicBtoTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasks/creartipobalota/IngresarColorTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasks/creartipobalota/IngresarNombreTipoBalotaTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasks/creartipobalota/SeleccionarHomologaTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasks/creartipobalota/SeleccionarParametroTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tasks/creartipobalota/SeleccionarTipoBalotaTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ui/CreacionBalotaTotal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/runners/creartipobalota/RunnerCrearTipoBalota.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinition/creartipobalota/CrearTipoBalotaStepDefinition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/creartipobalota/creartipobalota.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/GeneradorDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/GeneradorDatos.java" afterDir="false" />
     </list>

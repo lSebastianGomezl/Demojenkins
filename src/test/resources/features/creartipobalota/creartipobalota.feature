@@ -1,5 +1,5 @@
 # language: es
-
+#HU20
 Característica: Crear un tipo balota en la plataforma GSV
 
   Como un usuario autorizado

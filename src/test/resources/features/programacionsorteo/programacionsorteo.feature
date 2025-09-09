@@ -1,5 +1,5 @@
 # language: es
-
+#HU02
 Característica: Configuracion de sorteo en la plataforma GSV
 
   Como un usuario autorizado
