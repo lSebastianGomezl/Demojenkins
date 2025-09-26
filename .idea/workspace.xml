@@ -7,23 +7,6 @@
     <list default="true" id="c07d4157-c685-4ee3-8fcc-709ad059e0c4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/questions/crartipobalota/PaginaCrearTipoBalota.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/questions/crartipobalota/PaginaCrearTipoBalota.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/questions/crearsorteo/PaginaCrearSorteo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/questions/crearsorteo/PaginaCrearSorteo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tasks/creartipobalota/SeleccionarParametroTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasks/creartipobalota/SeleccionarParametroTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tasks/login/ClicBtnConfirmarHuella.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasks/login/ClicBtnConfirmarHuella.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/CreacionBalotaTotal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/CreacionBalotaTotal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/PaginaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/PaginaPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/GeneradorDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/GeneradorDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/configuracionparametros/RunnerConfiguracionParametros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/configuracionparametros/RunnerConfiguracionParametros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinition/configuracionparametros/ConfiguracionParametrosStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinition/configuracionparametros/ConfiguracionParametrosStepDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinition/creartipobalota/CrearTipoBalotaStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinition/creartipobalota/CrearTipoBalotaStepDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinition/programacionsorteo/ProgramacionSorteoStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinition/programacionsorteo/ProgramacionSorteoStepDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/configuraciondeparametros/configuracionparametros.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/configuraciondeparametros/configuracionparametros.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/crearsorteo/crearsorteo.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/crearsorteo/crearsorteo.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/creartipobalota/creartipobalota.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/creartipobalota/creartipobalota.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/login/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/login/login.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/programacionsorteo/programacionsorteo.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/programacionsorteo/programacionsorteo.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
