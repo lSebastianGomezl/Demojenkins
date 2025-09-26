@@ -1,27 +1,29 @@
-package stepdefinition.configuracionparametros;
+package stepdefinition.creacionplantillas;
 
+import com.github.dockerjava.api.model.UpdateConfig;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.Before;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
-import io.cucumber.java.es.Y;
 import models.DatosUsuario;
 import net.serenitybdd.core.Serenity;
 import net.serenitybdd.screenplay.actors.OnStage;
-import net.serenitybdd.screenplay.waits.WaitUntil;
-import questions.configuracionparametros.ConfiguracionParametroQuestion;
+import questions.crartipobalota.PaginaCrearTipoBalota;
 import questions.crearsorteo.PaginaCrearSorteo;
 import questions.login.PaginaDashboard;
 import stepdefinition.login.LoginStepDefinition;
 import tasks.Abrir;
-import tasks.configuracionparametros.*;
+import tasks.creacionplantillas.*;
 import tasks.crearsorteo.ClicBtoCrearSorteoTask;
 import tasks.crearsorteo.ClicConfiguracionSorteoslTask;
 import tasks.crearsorteo.ClicGestorSorteoVirtualTask;
 import tasks.crearsorteo.formulario.*;
+import tasks.creartipobalota.ClicBtoAgregarParametroTask;
+import tasks.creartipobalota.ClicBtoGuardarTask;
+import tasks.creartipobalota.IngresarColorTask;
+import tasks.creartipobalota.SeleccionarParametroTask;
 import tasks.login.*;
-import ui.ConfiguracionSorteo;
 import utils.GeneradorDatos;
 
 import java.util.HashMap;
@@ -29,10 +31,9 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
-import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
+import static org.hamcrest.Matchers.is;
 
-public class ConfiguracionParametrosStepDefinition {
+public class CrearPlantillasStepDefinition {
     private static final Logger LOGGER = Logger.getLogger(LoginStepDefinition.class.getName());
     private Map<String, String> datosDinamicos = new HashMap<>();
     private boolean validarFechaInvalida = false;
@@ -43,7 +44,6 @@ public class ConfiguracionParametrosStepDefinition {
         String codigoUnico = GeneradorDatos.codigoUnico();
         String fechaActual = GeneradorDatos.fechaActual();
         String fechaInvalida = GeneradorDatos.fechaAnterior();
-
 
 
         Serenity.setSessionVariable("nombreSorteo").to(nombreSorteo);
@@ -145,83 +145,139 @@ public class ConfiguracionParametrosStepDefinition {
         );
     }
 
-    @Cuando("el usuario da clic en el botón {string}")
-    public void elUsuarioDaClicEnElBotón(String textoBoton) {
-        LOGGER.info("==> Da clic en el boton de Nuevo Parametro");
+    @Entonces("debería abrirse una nueva ventana con el buscador de plantillas {string}")
+    public void deberíaAbrirseUnaNuevaVentanaConElBuscadorDePlantillas(String tituloEsperado) {
+        LOGGER.info("==> Validando que se muestra la página: " + tituloEsperado);
+        OnStage.theActorInTheSpotlight().should(
+                seeThat(PaginaDashboard.esVisible(tituloEsperado))
+        );
+    }
+    @Cuando("el usuario hace clic en el botón {string}")
+    public void elUsuarioHaceClicEnElBotón(String textoBoton) {
+        LOGGER.info("==> Da clic en el boton de nueva plantilla");
         System.out.println("Texto del boton" + textoBoton);
         OnStage.theActorInTheSpotlight().attemptsTo(
                 ClicBtoCrearSorteoTask.conTexto(textoBoton)
         );
     }
-
     @Cuando("selecciona la empresa propietaria {string}")
     public void seleccionaLaEmpresaPropietaria(String tituloEmpresa) {
         LOGGER.info("==> Selecciona el nombre de la empresa propietaria");
-        theActorInTheSpotlight().attemptsTo(
+        OnStage.theActorInTheSpotlight().attemptsTo(
                 SeleccionarEmpresaTask.empresaPropietaria(tituloEmpresa)
         );
-
     }
-
-    @Cuando("llena el campo {string} con {string}")
-    public void llenaElCampoCon(String campo, String valor) {
-        LOGGER.info("==> Llena el formulario de configuracion de parametro");
+    @Cuando("ingresa el nombre del plantilla {string}")
+    public void ingresaElNombreDelPlantilla(String nombrePlantilla) {
+        LOGGER.info("==> Ingresa el nombre de la plantilla");
         OnStage.theActorInTheSpotlight().attemptsTo(
-                LlenarCampoFormulario.conValor(campo, valor)
+                IngresarNombrePlantillaTask.on(valor(nombrePlantilla))
         );
     }
-    @Cuando("llena el campo Clave del parámetro con {string}")
-    public void llenaElCampoClaveDelParámetroCon(String clave) {
-        LOGGER.info("==> Ingresa el valor de la clave");
+    @Cuando("ingresa el código único de plantilla {string}")
+    public void ingresaElCódigoÚnicoDePlantilla(String codigoUnico) {
+        LOGGER.info("==> Ingresa el codigo de plantilla");
         OnStage.theActorInTheSpotlight().attemptsTo(
-                IngresarClaveTask.on(valor(clave)));
+                IngresarCodigoPlantillaTask.on(valor(codigoUnico))
+        );
     }
-    @Cuando("llena el campo Nombre del parámetro con {string}")
-    public void llenaElCampoNombreDelParámetroCon(String parametro) {
-        LOGGER.info("==> Ingresa el nombre del parametro");
+    @Cuando("escribe la descripción {string}")
+    public void escribeLaDescripción(String descripcion) {
+        LOGGER.info("==> Ingresa la descripcion de la plantilla");
         OnStage.theActorInTheSpotlight().attemptsTo(
-                IngresarParametroTask.on(valor(parametro)));
+                IngresarDescripcionPlantillaTask.on(descripcion)
+        );
     }
-    @Cuando("llena el campo Descripcion con {string}")
-    public void llenaElCampoDescripcionCon(String descripcion) {
-        LOGGER.info("==> Ingresa la descripcion para el parametro");
+    @Cuando("carga el archivo {string}")
+    public void cargaElArchivo(String nombreArchivo) {
+        LOGGER.info("==> Sube el archivo png");
         OnStage.theActorInTheSpotlight().attemptsTo(
-                IngresarDescripcionTask.on(valor(descripcion)));
+                UploadConRobot.desde(nombreArchivo)
+        );
+        System.out.println("Ingreso la ruta del archivo al file");
     }
+    @Cuando("configura el parámetro de formato de plantilla {string}")
+    public void configuraElParámetroDeFormatoDePlantilla(String string) {
 
+    }
+    @Cuando("el usuario da clic en el botón {string}")
+    public void elUsuarioDaClicEnElBotón(String btnGuardar) {
+        LOGGER.info("==> Da clic en el boton de guardar");
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                ClicBtoCrearSorteoTask.conTexto(btnGuardar)
+        );
+    }
     @Cuando("el usuario hace clic en {string} en el modal")
     public void elUsuarioHaceClicEnEnElModal(String btnAceptar) {
         LOGGER.info("==> Da clic en el boton de aceptar");
         OnStage.theActorInTheSpotlight().attemptsTo(
                 ClicBtoCrearSorteoTask.conTexto(btnAceptar)
         );
-
     }
 
-//    @Cuando("el usuario selecciona la empresa {string}")
-//    public void elUsuarioSeleccionaLaEmpresa(String nombreEmpresa) {
-//        LOGGER.info("==> Da clic en seleccionar empresa y la selecciona");
-//        OnStage.theActorInTheSpotlight().attemptsTo(
-//                ClicEmpresaPropietariaTask.on(nombreEmpresa)
-//        );
-//    }
-    @Cuando("el usuario da clic en el icono de editar")
-    public void elUsuarioDaClicEnElIconoDeEditar() {
-        LOGGER.info("==> Da clic en el incono de editar");
+    @Cuando("el usuario da clic en la opcion agregar parametro")
+    public void elUsuarioDaClicEnLaOpcionAgregarParametro() {
+        LOGGER.info("==> Da clic en el boton agregar parametro");
         OnStage.theActorInTheSpotlight().attemptsTo(
-                ClicIconoEditarTask.on()
+                ClicBtoAgregarParametroTask.on()
+        );
+    }
+
+    @Cuando("selecciona el parametro")
+    public void seleccionaElParametro() {
+        LOGGER.info("==> Selecciona el parametro");
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                SeleccionarParametroTask.on()
+        );
+    }
+    @Cuando("el usuario ingresa el color {string}")
+    public void elUsuarioIngresaElColor(String color) {
+        LOGGER.info("==> Ingresa el valor del color en rgb");
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                IngresarColorTask.on(color)
+        );
+    }
+    @Cuando("el usuario da clic en el botón guardar")
+    public void elUsuarioDaClicEnElBotónGuardar() {
+        LOGGER.info("==> Da clic en el boton guardar");
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                ClicBtoGuardarTask.on()
         );
     }
 
     @Entonces("debería aparecer un modal de confirmación {string}")
-    public void deberíaAparecerUnModalDeConfirmación(String tituloAlert) throws InterruptedException {
-        LOGGER.info("==> Valida la alert de configuracion de sorteo exitoso");
+    public void deberíaAparecerUnModalDeConfirmación(String tituloAlert) {
+        LOGGER.info("==> Valida la alert de la creacion del parametro exitosa");
 
-        OnStage.theActorInTheSpotlight().attemptsTo(
-                WaitUntil.the(
-                        ConfiguracionSorteo.validacionCracionSorteo(tituloAlert),
-                        isVisible()
-                ).forNoMoreThan(5).seconds());
+        OnStage.theActorInTheSpotlight().should(
+                seeThat(PaginaCrearTipoBalota.tipoBalotaParametroSuccessful(tituloAlert), is(true))
+        );
     }
+
+
+//
+//    @Cuando("el usuario da clic en el botón {string}")
+//    public void elUsuarioDaClicEnElBotón(String btnGuardar) {
+//        LOGGER.info("==> Da clic en el boton de guardar");
+//        OnStage.theActorInTheSpotlight().attemptsTo(
+//                ClicBtoCrearSorteoTask.conTexto(btnGuardar)
+//        );
+//    }
+//
+//    @Y("el usuario hace clic en {string} en el modal")
+//    public void elUsuarioHaceClicEnEnElModal(String btnAceptar) {
+//        LOGGER.info("==> Da clic en el boton de aceptar");
+//        OnStage.theActorInTheSpotlight().attemptsTo(
+//                ClicBtoCrearSorteoTask.conTexto(btnAceptar)
+//        );
+//    }
+//
+//    @Entonces("debería aparecer un modal de confirmación {string}")
+//    public void deberíaAparecerUnModalDeConfirmación(String tituloAlert) {
+//        LOGGER.info("==> Valida la alert de la creacion del sorteo exitosa");
+//        OnStage.theActorInTheSpotlight().should(
+//                seeThat(PaginaCrearSorteo.sorteoSuccessful(tituloAlert))
+//        );
+//    }
 
 }

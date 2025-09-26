@@ -25,4 +25,12 @@ public class PaginaCrearSorteo {
             return textoUI.equalsIgnoreCase(mensajeEsperado.trim());
         };
     }
+    public static Question<Boolean> plantillaSuccessful(String mensajeEsperado) {
+        return actor -> {
+            String textoUI = Text.of(ConfiguracionSorteo.validacionCracionSorteo(mensajeEsperado)).answeredBy(actor).trim();
+            System.out.println("Texto en UI capturado: [" + textoUI + "]");
+            System.out.println("Texto esperado: [" + mensajeEsperado.trim() + "]");
+            return textoUI.equalsIgnoreCase(mensajeEsperado.trim());
+        };
+    }
 }

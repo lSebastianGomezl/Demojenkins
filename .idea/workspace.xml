@@ -5,21 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c07d4157-c685-4ee3-8fcc-709ad059e0c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/questions/crartipobalota/PaginaCrearTipoBalota.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tasks/creartipobalota/ClicBtoAgregarParametroTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tasks/creartipobalota/ClicBtoGuardarTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tasks/creartipobalota/ClicBtoTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tasks/creartipobalota/IngresarColorTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tasks/creartipobalota/IngresarNombreTipoBalotaTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tasks/creartipobalota/SeleccionarHomologaTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tasks/creartipobalota/SeleccionarParametroTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tasks/creartipobalota/SeleccionarTipoBalotaTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/CreacionBalotaTotal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/runners/creartipobalota/RunnerCrearTipoBalota.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinition/creartipobalota/CrearTipoBalotaStepDefinition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/creartipobalota/creartipobalota.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/questions/crartipobalota/PaginaCrearTipoBalota.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/questions/crartipobalota/PaginaCrearTipoBalota.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/questions/crearsorteo/PaginaCrearSorteo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/questions/crearsorteo/PaginaCrearSorteo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasks/creartipobalota/SeleccionarParametroTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasks/creartipobalota/SeleccionarParametroTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasks/login/ClicBtnConfirmarHuella.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasks/login/ClicBtnConfirmarHuella.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/CreacionBalotaTotal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/CreacionBalotaTotal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/PaginaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/PaginaPrincipal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/GeneradorDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/GeneradorDatos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/configuracionparametros/RunnerConfiguracionParametros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/configuracionparametros/RunnerConfiguracionParametros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinition/configuracionparametros/ConfiguracionParametrosStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinition/configuracionparametros/ConfiguracionParametrosStepDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinition/creartipobalota/CrearTipoBalotaStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinition/creartipobalota/CrearTipoBalotaStepDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinition/programacionsorteo/ProgramacionSorteoStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinition/programacionsorteo/ProgramacionSorteoStepDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/configuraciondeparametros/configuracionparametros.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/configuraciondeparametros/configuracionparametros.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/crearsorteo/crearsorteo.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/crearsorteo/crearsorteo.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/creartipobalota/creartipobalota.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/creartipobalota/creartipobalota.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/login/login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/login/login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/programacionsorteo/programacionsorteo.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/programacionsorteo/programacionsorteo.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,52 +96,80 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build DemoAppClientes.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build GeneradorDeSorteosVirtuales.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginRunner (1).executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginRunner.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RunnerConfiguracionParametros.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RunnerCrearSorteo.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RunnerCrearTipoBalota.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RunnerLogin.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RunnerProgramacionSorteo.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Main.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Main.login.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RunnerCrearSorteo.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RunnerProgramacionSorteo.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sebastian.gomez/OneDrive - GRUPO EMPRESARIAL EN LINEA S.A/Documentos/PracticaAutomatizacion&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.44312027&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build DemoAppClientes.executor": "Run",
+    "Gradle.Build GeneradorDeSorteosVirtuales.executor": "Run",
+    "Gradle.GeneradorDeSorteosVirtuales [:Main.main()].executor": "Run",
+    "Gradle.GeneradorDeSorteosVirtuales [:runners.EjecutarRunnersUI.main()].executor": "Run",
+    "Gradle.GeneradorDeSorteosVirtuales [:ui.EjecutarRunnersUI.main()].executor": "Run",
+    "Gradle.GeneradorDeSorteosVirtuales [:ui.RunnerInterface.main()].executor": "Run",
+    "Gradle.LoginRunner (1).executor": "Run",
+    "Gradle.LoginRunner.executor": "Run",
+    "Gradle.RunnerConfiguracionParametros.executor": "Run",
+    "Gradle.RunnerCrearPlantillas.executor": "Run",
+    "Gradle.RunnerCrearSorteo.executor": "Run",
+    "Gradle.RunnerCrearTipoBalota.executor": "Debug",
+    "Gradle.RunnerLogin.executor": "Run",
+    "Gradle.RunnerPlanDeResultadoSorteo.executor": "Run",
+    "Gradle.RunnerProgramacionSorteo.executor": "Run",
+    "JUnit.Main.executor": "Run",
+    "JUnit.Main.login.executor": "Run",
+    "JUnit.RunnerConfiguracionParametros.executor": "Run",
+    "JUnit.RunnerCrearSorteo.executor": "Run",
+    "JUnit.RunnerProgramacionSorteo.executor": "Debug",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/sebastian.gomez/OneDrive - GRUPO EMPRESARIAL EN LINEA S.A/Documentos/GeneradorDeSorteosVirtuales/src/test/resources/features/creacionplantillas",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.44312027",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\GeneradorDeSorteosVirtuales\src\test\resources\features\creacionplantillas" />
+      <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\GeneradorDeSorteosVirtuales\src\test\resources\features\configuraciondeplanderesultadosbaloterasybalotas" />
       <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\GeneradorDeSorteosVirtuales\src\test\resources\features\creaciontipobalota" />
       <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\GeneradorDeSorteosVirtuales\src\test\resources\features\configuraciondeparametros" />
       <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\GeneradorDeSorteosVirtuales\src\test\resources\features\programacionsorteos" />
-      <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\GeneradorDeSorteosVirtuales" />
-      <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\FlutterWeb\DemoAppClientes\src\test\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\GeneradorDeSorteosVirtuales\src\main\resources" />
       <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\GeneradorDeSorteosVirtuales\src\test\resources\features\" />
       <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\BACK UP DISCO D\desk\FlutterWeb\DemoAppClientes\src\test\resources\features\login" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="tasks.creartipobalota" />
-      <recent name="questions.crartipobalota" />
-      <recent name="tasks.creartipobalota.formulario" />
-      <recent name="runners.creartipobalota" />
-      <recent name="stepdefinition.creaciontipobalota" />
+      <recent name="tasks.creacionplantillas" />
+      <recent name="stepdefinition.creacionpantillas" />
+      <recent name="runners.creacionplantillas" />
+      <recent name="tasks.configuracionplanderesultados" />
+      <recent name="runners.configuracionplanderesultado" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RunnerCrearTipoBalota">
+  <component name="RunManager" selected="Application.EjecutarRunnersUI">
+    <configuration name="EjecutarRunnersUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="runners.EjecutarRunnersUI" />
+      <module name="GeneradorDeSorteosVirutales.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="GeneradorDeSorteosVirutales.test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RunnerConfiguracionParametros" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -162,7 +194,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RunnerCrearTipoBalota" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RunnerCrearPlantillas" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -175,34 +207,10 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;runners.creartipobalota.RunnerCrearTipoBalota&quot;" />
+            <option value="&quot;runners.creacionplantillas.RunnerCrearPlantillas&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="RunnerLogin" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;runners.login.RunnerLogin&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
@@ -234,17 +242,17 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RunnerProgramacionSorteo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GeneradorDeSorteosVirutales.test" />
+    <configuration name="RunnerConfiguracionParametros" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GeneradorDeSorteosVirutales.main" />
       <shortenClasspath name="MANIFEST" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="runners.programacionsorteo.*" />
+          <option name="PATTERN" value="runners.configuracionparametros.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="runners.programacionsorteo" />
-      <option name="MAIN_CLASS_NAME" value="runners.programacionsorteo.RunnerProgramacionSorteo" />
+      <option name="PACKAGE_NAME" value="runners.configuracionparametros" />
+      <option name="MAIN_CLASS_NAME" value="runners.configuracionparametros.RunnerConfiguracionParametros" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -258,18 +266,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.EjecutarRunnersUI" />
+      <item itemvalue="Application.Main" />
       <item itemvalue="Gradle.RunnerProgramacionSorteo" />
-      <item itemvalue="Gradle.RunnerCrearTipoBalota" />
+      <item itemvalue="Gradle.RunnerCrearPlantillas" />
       <item itemvalue="Gradle.RunnerConfiguracionParametros" />
-      <item itemvalue="Gradle.RunnerLogin" />
-      <item itemvalue="JUnit.RunnerProgramacionSorteo" />
+      <item itemvalue="JUnit.RunnerConfiguracionParametros" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.RunnerCrearTipoBalota" />
+        <item itemvalue="Gradle.RunnerCrearPlantillas" />
         <item itemvalue="Gradle.RunnerConfiguracionParametros" />
-        <item itemvalue="Gradle.RunnerLogin" />
-        <item itemvalue="JUnit.RunnerProgramacionSorteo" />
+        <item itemvalue="JUnit.RunnerConfiguracionParametros" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.EjecutarRunnersUI" />
       </list>
     </recent_temporary>
   </component>
@@ -309,7 +319,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/stepdefinition/programacionsorteo/ProgramacionSorteoStepDefinition.java</url>
-          <line>205</line>
+          <line>214</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
@@ -337,15 +347,90 @@
           <line>65</line>
           <option name="timeStamp" value="47" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/tasks/configuracionparametros/ClicIconoEditarTask.java</url>
           <line>21</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/stepdefinition/configuraciondeplanderesultados/ConfiguracionPlanDeResultadoStepDefinition.java</url>
+          <line>312</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/stepdefinition/configuraciondeplanderesultados/ConfiguracionPlanDeResultadoStepDefinition.java</url>
+          <line>320</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tasks/configuracionplanderesultados/LlenarFormularioPlanResultados.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/stepdefinition/configuraciondeplanderesultados/ConfiguracionPlanDeResultadoStepDefinition.java</url>
+          <line>336</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tasks/configuracionplanderesultados/LlenarFormularioBalotera.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/stepdefinition/configuraciondeplanderesultados/ConfiguracionPlanDeResultadoStepDefinition.java</url>
+          <line>351</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/stepdefinition/configuraciondeplanderesultados/ConfiguracionPlanDeResultadoStepDefinition.java</url>
+          <line>137</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tasks/creacionplantillas/CargarArchivoTask.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tasks/creacionplantillas/CargarArchivoTask.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/stepdefinition/creacionplantillas/CrearPlantillasStepDefinition.java</url>
+          <line>195</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/questions/crartipobalota/PaginaCrearTipoBalota.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="50" />
+          <url>file://$PROJECT_DIR$/src/test/java/stepdefinition/creacionplantillas/CrearPlantillasStepDefinition.java</url>
+          <line>213</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/questions/crearsorteo/PaginaCrearSorteo.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/stepdefinition/configuraciondeplanderesultados/ConfiguracionPlanDeResultadoStepDefinition.java</url>
+          <line>378</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/stepdefinition/programacionsorteo/ProgramacionSorteoStepDefinition.java</url>
+          <line>156</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/stepdefinition/creartipobalota/CrearTipoBalotaStepDefinition.java</url>
+          <line>156</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tasks/crearsorteo/formulario/SeleccionarEmpresaTask.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="102" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -9,8 +9,8 @@ Característica: Crear un sorteo en la plataforma GSV
   Antecedentes:
     Dado que el actor abre la aplicación
     Y diligencia el formulario de login con los siguientes datos:
-      | tipoDocumento        | usuario    | contrasenna |
-      | Cédula de ciudadanía | 52202663   | Francisco*2024  |
+      | tipoDocumento        | usuario    | contrasenna    |
+      | Cédula de ciudadanía | 52202663   | Armenia2025*@  |
     Y hace clic en el botón validar biometrico
     Y hace clic en el botón Iniciar sesión
     Y acepta la primera alerta

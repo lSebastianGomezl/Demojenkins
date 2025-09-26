@@ -39,6 +39,14 @@ dependencies {
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
+tasks.withType(Test) {
+    useJUnitPlatform()
+    jvmArgs += [
+            "--add-opens=java.base/java.lang=ALL-UNNAMED",
+            "--add-opens=java.base/java.lang.reflect=ALL-UNNAMED",
+            "--illegal-access=permit"
+    ]
+}
 
 test {
     useJUnit()

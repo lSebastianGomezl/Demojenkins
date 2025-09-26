@@ -16,6 +16,7 @@ import tasks.Abrir;
 import tasks.crearsorteo.ClicBtoCrearSorteoTask;
 import tasks.crearsorteo.ClicConfiguracionSorteoslTask;
 import tasks.crearsorteo.ClicGestorSorteoVirtualTask;
+import tasks.crearsorteo.formulario.SeleccionarEmpresaTask;
 import tasks.creartipobalota.*;
 import tasks.login.*;
 import ui.CreacionBalotaTotal;
@@ -149,13 +150,13 @@ public class CrearTipoBalotaStepDefinition {
                 ClicBtoCrearSorteoTask.conTexto(textoBoton)
         );
     }
-//    @Cuando("selecciona la empresa propietaria {string}")
-//    public void seleccionaLaEmpresaPropietaria(String tituloEmpresa) {
-//        LOGGER.info("==> Selecciona el nombre de la empresa propietaria");
-//        OnStage.theActorInTheSpotlight().attemptsTo(
-//                SeleccionarEmpresaTask.empresaPropietaria(tituloEmpresa)
-//        );
-//    }
+    @Cuando("selecciona la empresa propietaria {string}")
+    public void seleccionaLaEmpresaPropietaria(String tituloEmpresa) {
+        LOGGER.info("==> Selecciona el nombre de la empresa propietaria");
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                SeleccionarEmpresaTask.empresaPropietaria(tituloEmpresa)
+        );
+    }
     @Cuando("ingresa el nombre del tipo de balota {string}")
     public void ingresaElNombreDelTipoDeBalota(String nombreTipoBalota) {
         LOGGER.info("==> Ingresa el nombre del tipo de balota");

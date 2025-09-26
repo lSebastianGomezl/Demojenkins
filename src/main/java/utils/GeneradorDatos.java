@@ -46,4 +46,14 @@ public class GeneradorDatos {
     }
 
 
+    public static String generarNombreBalotera() {
+        String timestamp = new SimpleDateFormat("dd_HHmmss").format(new Date());
+
+        return "BALOTERA_" + timestamp;
+    }
+
+
+
+
+
 }

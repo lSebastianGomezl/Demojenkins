@@ -9,8 +9,8 @@ Característica: Configuracion de sorteo en la plataforma GSV
   Antecedentes:
     Dado que el actor abre la aplicación
     Y diligencia el formulario de login con los siguientes datos:
-      | tipoDocumento        | usuario    | contrasenna |
-      | Cédula de ciudadanía | 52202665   | Bgta2025*@  |
+      | tipoDocumento        | usuario    | contrasenna   |
+      | Cédula de ciudadanía | 52202663   | Armenia2025*@ |
     Y hace clic en el botón validar biometrico
     Y hace clic en el botón Iniciar sesión
     Y acepta la primera alerta
@@ -21,6 +21,7 @@ Característica: Configuracion de sorteo en la plataforma GSV
     Y selecciona el submenú "Configuración de Parámetros"
     Y el usuario da clic en el botón "Nuevo parámetro"
     #Cuando llena el campo "Empresa" con "GELSA"
+    Cuando selecciona la empresa propietaria "<Empresa>"
     Y llena el campo "tipoCampoFiltro" con "BOOLEAN"
     Y llena el campo "tipoParametro" con "SORTEO"
     Y llena el campo Clave del parámetro con "<Clave>"
@@ -32,8 +33,8 @@ Característica: Configuracion de sorteo en la plataforma GSV
 
 
     Ejemplos:
-      |Mensaje                                              |Parametro                |Clave              |Descripcion     |
-      |Configuración de parámetros creada exitosamente      |autroincremental         |autoincremental    |autoincremental |
+    |Empresa  |Mensaje                                              |Parametro                |Clave              |Descripcion     |
+    |GELSA    |Configuración de parámetros creada exitosamente      |autroincremental         |autoincremental    |autoincremental |
 
   @002
   Esquema del escenario: Consulta de configuracion de parametros exitosa
@@ -41,6 +42,7 @@ Característica: Configuracion de sorteo en la plataforma GSV
     Y selecciona el submenú "Configuración de Parámetros"
     #Y el usuario da clic en el botón "Nuevo parámetro"
     #Cuando el usuario selecciona la empresa "GELSA"
+    Cuando selecciona la empresa propietaria "<Empresa>"
     Y el usuario da clic en el botón "Consultar"
     Y el usuario da clic en el icono de editar
     #Y el usuario hace clic en "Aceptar" en el modal
@@ -51,5 +53,5 @@ Característica: Configuracion de sorteo en la plataforma GSV
 
 
     Ejemplos:
-      |Mensaje                                              |Clave               |
-      |Configuración de parámetros creada exitosamente      |autoincremental     |
+     |Empresa |Mensaje                                              |Clave               |
+     |GELSA |Configuración de parámetros creada exitosamente      |autoincremental     |

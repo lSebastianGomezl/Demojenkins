@@ -1,5 +1,6 @@
 package questions.crartipobalota;
 
+import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 import ui.ConfiguracionSorteo;
@@ -12,18 +13,16 @@ public class PaginaCrearTipoBalota {
 
     public static Question<Boolean> tipoBalotaParametroSuccessful(String textoEsperado) {
         return actor -> {
-            // Esperar a que sea visible
-            CreacionBalotaTotal.ALERT_SUCCESS.resolveFor(actor).waitUntilVisible();
+            WebElementFacade alert = CreacionBalotaTotal.ALERT_SUCCESS.resolveFor(actor);
 
-            // Capturar texto
-            String textoUI = CreacionBalotaTotal.ALERT_SUCCESS.resolveFor(actor).getText().trim();
+            alert.waitUntilVisible();
+            String textoUI = alert.getText().trim().replaceAll("\\s+", " ");
 
             System.out.println("Texto capturado en UI: [" + textoUI + "]");
             System.out.println("Texto esperado: [" + textoEsperado.trim() + "]");
 
-            // Validar visibilidad + texto
-            return CreacionBalotaTotal.ALERT_SUCCESS.resolveFor(actor).isVisible()
-                    && textoUI.equalsIgnoreCase(textoEsperado.trim());
+            return alert.isVisible() &&
+                    textoUI.equalsIgnoreCase(textoEsperado.trim().replaceAll("\\s+", " "));
         };
 //    public static Question<Boolean> tipoBalotaParametroSuccessful() {
 //        return actor -> {

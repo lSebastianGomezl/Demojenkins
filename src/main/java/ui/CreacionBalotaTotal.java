@@ -43,5 +43,8 @@ public class CreacionBalotaTotal {
             .located(By.xpath("//div[contains(@class,'p-toast')]//div[contains(@class,'p-toast-detail')]"));
 
 
+    public static final Target COLOR = Target.the("campo de texto de 9 caracteres")
+            .located(By.xpath("//li[@role='option' and contains(@class,'p-dropdown-item') and @aria-label='COLOR']\n"));
+
 }
 //button[@id="btnSaveModal"]

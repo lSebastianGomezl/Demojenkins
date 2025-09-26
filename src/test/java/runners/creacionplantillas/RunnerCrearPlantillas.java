@@ -1,4 +1,4 @@
-package runners.configuracionparametros;
+package runners.creacionplantillas;
 
 
 import io.cucumber.junit.CucumberOptions;
@@ -7,9 +7,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features ="src/test/resources/features/configuraciondeparametros",
-        glue = {"stepdefinition.configuracionparametros", "stepdefinition.hooks"},
+        features ="src/test/resources/features/creacionplantillas",
+        glue = {"stepdefinition.creacionplantillas", "stepdefinition.hooks"},
         tags = "",
         snippets = CucumberOptions.SnippetType.CAMELCASE)
-public class RunnerConfiguracionParametros {
+public class RunnerCrearPlantillas {
 }

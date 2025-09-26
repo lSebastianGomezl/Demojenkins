@@ -9,8 +9,8 @@ Característica: Crear un tipo balota en la plataforma GSV
   Antecedentes:
     Dado que el actor abre la aplicación
     Y diligencia el formulario de login con los siguientes datos:
-      | tipoDocumento        | usuario    | contrasenna |
-      | Cédula de ciudadanía | 52202665   | Bgta2025*@  |
+      | tipoDocumento        | usuario    | contrasenna   |
+      | Cédula de ciudadanía | 52202663   | Armenia2025*@  |
     Y hace clic en el botón validar biometrico
     Y hace clic en el botón Iniciar sesión
     Y acepta la primera alerta
@@ -20,6 +20,7 @@ Característica: Crear un tipo balota en la plataforma GSV
     Cuando el usuario ingresa al menú lateral "GSV"
     Y selecciona el submenú "Tipo de balotas"
     Cuando el usuario hace clic en el botón "Nuevo tipo de balota"
+    Cuando selecciona la empresa propietaria "<Empresa>"
     Y ingresa el nombre del tipo de balota "<Nombre de balota>"
     Y selecciona el tipo de balota "<Tipo de balota>"
     Y selecciona opcion de homologacion "<Homologa>"
@@ -38,6 +39,6 @@ Característica: Crear un tipo balota en la plataforma GSV
 
 
     Ejemplos:
-      | Nombre de balota | Tipo de balota | Homologa |  Mensaje                                     |
-      | dinamico         | NUMERICO       | SI       | Tipo de balota parametro creado exitosamente.|
+     |Empresa | Nombre de balota | Tipo de balota | Homologa |  Mensaje                                     |
+     |GELSA   | dinamico         | NUMERICO       | SI       | Tipo de balota parametro creado exitosamente.|
 

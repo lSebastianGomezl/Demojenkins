@@ -21,7 +21,7 @@ public class ClicBtnConfirmarHuella implements Task {
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(
-                WaitUntil.the(PaginaPrincipal.BTN_ACEPTAR_HUELLA, isNotVisible()).forNoMoreThan(60).seconds(),
+                //WaitUntil.the(PaginaPrincipal.BTN_ACEPTAR_HUELLA, isNotVisible()).forNoMoreThan(60).seconds(),
                 Click.on(PaginaPrincipal.BTN_ACEPTAR_HUELLA)
         );
 

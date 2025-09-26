@@ -9,8 +9,8 @@ Característica: Configuracion de sorteo en la plataforma GSV
   Antecedentes:
     Dado que el actor abre la aplicación
     Y diligencia el formulario de login con los siguientes datos:
-      | tipoDocumento        | usuario    | contrasenna |
-      | Cédula de ciudadanía | 52202665   | Bgta2025*@  |
+      | tipoDocumento        | usuario    | contrasenna    |
+      | Cédula de ciudadanía | 52202663  | Armenia2025*@  |
     Y hace clic en el botón validar biometrico
     Y hace clic en el botón Iniciar sesión
     Y acepta la primera alerta
@@ -24,6 +24,7 @@ Característica: Configuracion de sorteo en la plataforma GSV
     #Cuando el usuario hace clic en el botón "Crear Sorteo"
     #Entonces debería abrirse una nueva ventana con el formulario de creacion de sorteos y ver el texto "Información del sorteo"
     Cuando ingresa el codigo numero "<codigo>" en el codigo unico de sorteo
+    Cuando selecciona la empresa propietaria "<Empresa>"
     Y el usuario da clic en el botón "Consultar"
     Y el usuario da clic en la accion editar del codigo de sorteo "<codigo>"
     Y el usuario ingresa al menú "Programaciones del sorteo"
@@ -36,8 +37,8 @@ Característica: Configuracion de sorteo en la plataforma GSV
 
 
     Ejemplos:
-      |  Hora            |Mensaje                                      | codigo|tipoFecha|
-      |  20:00:00        | Configuración registrada exitosamente       |  33   |fechaUnica|
+    |Empresa  |  Hora            |Mensaje                                      | codigo|tipoFecha|
+    |GELSA    |  20:00:00        | Configuración registrada exitosamente       |  33   |fechaUnica|
   @002
   Esquema del escenario: Programacion de sorteos multiples fecha exitosa
     Cuando el usuario ingresa al menú lateral "GSV"
@@ -45,6 +46,7 @@ Característica: Configuracion de sorteo en la plataforma GSV
     Entonces debería abrirse una nueva ventana con el buscador de sorteos "GSV"
 
     Cuando ingresa el codigo numero "<codigo>" en el codigo unico de sorteo
+    Cuando selecciona la empresa propietaria "<Empresa>"
     Y el usuario da clic en el botón "Consultar"
     Y el usuario da clic en la accion editar del codigo de sorteo "<codigo>"
     Y el usuario ingresa al menú "Programaciones del sorteo"
@@ -62,6 +64,6 @@ Característica: Configuracion de sorteo en la plataforma GSV
 
 
     Ejemplos:
-      |  horaInicial | horaFinal    |Mensaje                                      | codigo|tipoFecha      |
-      |  17:00:00    | 22:00:00     | Configuración registrada exitosamente       |  33   |multipleFecha  |
+     |Empresa |  horaInicial | horaFinal    |Mensaje                                      | codigo|tipoFecha      |
+     |GELSA   |  17:00:00    | 22:00:00     | Configuración registrada exitosamente       |  33   |multipleFecha  |
 

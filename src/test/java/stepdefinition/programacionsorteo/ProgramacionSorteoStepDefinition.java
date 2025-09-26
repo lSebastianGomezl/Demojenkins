@@ -16,6 +16,7 @@ import tasks.configuracionsorteo.*;
 import tasks.crearsorteo.ClicBtoCrearSorteoTask;
 import tasks.crearsorteo.ClicConfiguracionSorteoslTask;
 import tasks.crearsorteo.ClicGestorSorteoVirtualTask;
+import tasks.crearsorteo.formulario.SeleccionarEmpresaTask;
 import tasks.login.*;
 import utils.GeneradorDatos;
 
@@ -154,6 +155,14 @@ public class ProgramacionSorteoStepDefinition {
         LOGGER.info("==> Ingresando el codigo de sorteo a consultar: ");
         OnStage.theActorInTheSpotlight().attemptsTo(
                 IngresarCodigoSorteoConsultaTask.on(codSorteo)
+        );
+    }
+
+    @Cuando("selecciona la empresa propietaria {string}")
+    public void seleccionaLaEmpresaPropietaria(String tituloEmpresa) {
+        LOGGER.info("==> Selecciona el nombre de la empresa propietaria");
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                SeleccionarEmpresaTask.empresaPropietaria(tituloEmpresa)
         );
     }
     @Cuando("el usuario da clic en el botón {string}")
