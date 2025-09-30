@@ -1,4 +1,4 @@
-package runners;
+package home;
 
 import javax.swing.*;
 import java.awt.*;
@@ -76,14 +76,19 @@ public class EjecutarRunnersUI extends JFrame{
                     @Override
                     protected Void doInBackground() {
                         try {
-                            // Ejecuta gradlew test con el runner seleccionado
-                            ProcessBuilder pb = new ProcessBuilder(
-                                    "cmd", "/c", "gradlew", "test", "--tests", finalClase
-                            );
-                            pb.directory(new File(System.getProperty("user.dir"))); // Carpeta del proyecto
-                            pb.inheritIO(); // Redirige salida a la consola
-                            Process process = pb.start();
-                            process.waitFor();
+                            Class<?> runnerClass = Class.forName(finalClase);
+                            org.junit.runner.Result result = org.junit.runner.JUnitCore.runClasses(runnerClass);
+
+                            result.getFailures().forEach(f -> {
+                                System.err.println("FALLA: " + f.toString());
+                            });
+
+                            if (result.wasSuccessful()) {
+                                System.out.println(" Todas las pruebas pasaron para " + finalClase);
+                            } else {
+                                System.err.println("Hubo fallas en " + finalClase);
+                            }
+
                         } catch (Exception ex) {
                             ex.printStackTrace();
                             JOptionPane.showMessageDialog(null,
@@ -95,9 +100,7 @@ public class EjecutarRunnersUI extends JFrame{
                     @Override
                     protected void done() {
                         JOptionPane.showMessageDialog(null,
-                                "Ejecución de " + seleccion + " completada exitosamente!");
-
-                        // Cierra la app para que se genere el reporte
+                                "Ejecución de " + seleccion + " completada!");
                         System.exit(0);
                     }
                 };

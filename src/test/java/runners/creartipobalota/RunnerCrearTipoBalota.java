@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features ="src/test/resources/features/creartipobalota",
+        features ="classpath:features/creartipobalota",
         glue = {"stepdefinition.creartipobalota", "stepdefinition.hooks"},
         tags = "",
         snippets = CucumberOptions.SnippetType.CAMELCASE)

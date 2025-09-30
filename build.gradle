@@ -1,14 +1,14 @@
 plugins {
     id 'java'
+    id 'application' // necesario para definir un Main
+    id 'com.github.johnrengelman.shadow' version '7.1.2' // para empaquetar todo en un fat jar
     id 'net.serenity-bdd.serenity-gradle-plugin' version '3.7.0'
 }
 
-version '1.0-SNAPSHOT'
+version = '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
-defaultTasks 'clean', 'test', 'aggregate'
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
     mavenCentral()
@@ -34,12 +34,11 @@ dependencies {
     implementation 'io.github.bonigarcia:webdrivermanager:5.8.0'
     testImplementation 'ch.qos.logback:logback-classic:1.2.11'
     testImplementation "junit:junit:4.13.2"
-
 }
+
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
-
 
 test {
     useJUnit()
@@ -49,3 +48,35 @@ test {
         delete fileTree("target/site/serenity")
     }
 }
+
+// 🔹 Incluir clases y recursos de `test` en el jar final
+sourceSets {
+    test {
+        java { srcDirs = ['src/test/java'] }
+        resources { srcDirs = ['src/test/resources'] }
+    }
+}
+
+// 🔹 Clase principal para lanzar runners (Launcher.java)
+application {
+    mainClass = 'home.EjecutarRunnersUI'  // ajusta al paquete real
+}
+
+// 🔹 Configuración de shadowJar
+shadowJar {
+    archiveBaseName.set('automatizacion-serenity')
+    archiveClassifier.set('all')
+    archiveVersion.set(version)
+
+    from sourceSets.test.output
+
+    mergeServiceFiles()
+    manifest {
+        attributes 'Main-Class': application.mainClass
+    }
+
+    zip64 = true
+}
+
+// Para que `gradlew build` genere también el fat jar
+tasks.build.dependsOn shadowJar

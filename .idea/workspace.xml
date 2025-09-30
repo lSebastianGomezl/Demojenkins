@@ -7,6 +7,8 @@
     <list default="true" id="c07d4157-c685-4ee3-8fcc-709ad059e0c4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/EjecutarRunnersUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/home/EjecutarRunnersUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/creacionplantillas/RunnerCrearPlantillas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/creacionplantillas/RunnerCrearPlantillas.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +86,8 @@
     "Gradle.Build DemoAppClientes.executor": "Run",
     "Gradle.Build GeneradorDeSorteosVirtuales.executor": "Run",
     "Gradle.GeneradorDeSorteosVirtuales [:Main.main()].executor": "Run",
+    "Gradle.GeneradorDeSorteosVirtuales [:TestLauncher.main()].executor": "Run",
+    "Gradle.GeneradorDeSorteosVirtuales [:home.EjecutarRunnersUI.main()].executor": "Run",
     "Gradle.GeneradorDeSorteosVirtuales [:runners.EjecutarRunnersUI.main()].executor": "Run",
     "Gradle.GeneradorDeSorteosVirtuales [:ui.EjecutarRunnersUI.main()].executor": "Run",
     "Gradle.GeneradorDeSorteosVirtuales [:ui.RunnerInterface.main()].executor": "Run",
@@ -101,6 +105,7 @@
     "JUnit.RunnerConfiguracionParametros.executor": "Run",
     "JUnit.RunnerCrearSorteo.executor": "Run",
     "JUnit.RunnerProgramacionSorteo.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
@@ -132,13 +137,13 @@
       <recent name="runners.configuracionplanderesultado" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.EjecutarRunnersUI">
+  <component name="RunManager" selected="Gradle.RunnerCrearPlantillas">
     <configuration name="EjecutarRunnersUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="runners.EjecutarRunnersUI" />
+      <option name="MAIN_CLASS_NAME" value="home.EjecutarRunnersUI" />
       <module name="GeneradorDeSorteosVirutales.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="runners.*" />
+          <option name="PATTERN" value="home.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -146,9 +151,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="GeneradorDeSorteosVirutales.test" />
+    <configuration name="TestLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestLauncher" />
+      <module name="GeneradorDeSorteosVirutales.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -249,8 +254,8 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.TestLauncher" />
       <item itemvalue="Application.EjecutarRunnersUI" />
-      <item itemvalue="Application.Main" />
       <item itemvalue="Gradle.RunnerProgramacionSorteo" />
       <item itemvalue="Gradle.RunnerCrearPlantillas" />
       <item itemvalue="Gradle.RunnerConfiguracionParametros" />
@@ -259,10 +264,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.RunnerCrearPlantillas" />
+        <item itemvalue="Application.EjecutarRunnersUI" />
+        <item itemvalue="Application.TestLauncher" />
         <item itemvalue="Gradle.RunnerConfiguracionParametros" />
         <item itemvalue="JUnit.RunnerConfiguracionParametros" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.EjecutarRunnersUI" />
       </list>
     </recent_temporary>
   </component>

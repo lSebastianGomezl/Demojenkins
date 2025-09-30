@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features ="src/test/resources/features/configuraciondeplanderesultados",
+        features ="classpath:features/configuraciondeplanderesultados",
         glue = {"stepdefinition.configuraciondeplanderesultados", "stepdefinition.hooks"},
         tags = "",
         snippets = CucumberOptions.SnippetType.CAMELCASE)
