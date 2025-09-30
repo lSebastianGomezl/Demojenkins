@@ -30,6 +30,11 @@ public class GeneradorDatos {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         return ayer.format(formatter);
     }
+    public static String fechaDosDiasFuturos() {
+        return LocalDate.now()
+                .plusDays(2)
+                .format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    }
     public static String obtenerDiaActual() {
         return String.valueOf(LocalDate.now().getDayOfMonth());
     }

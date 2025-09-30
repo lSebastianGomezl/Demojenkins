@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c07d4157-c685-4ee3-8fcc-709ad059e0c4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/EjecutarRunnersUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/home/EjecutarRunnersUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/creacionplantillas/RunnerCrearPlantillas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/creacionplantillas/RunnerCrearPlantillas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/GeneradorDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/GeneradorDatos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/crearsorteo/RunnerCrearSorteo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/crearsorteo/RunnerCrearSorteo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinition/crearsorteos/CrearSorteoStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinition/crearsorteos/CrearSorteoStepDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/crearsorteo/crearsorteo.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/crearsorteo/crearsorteo.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +138,20 @@
       <recent name="runners.configuracionplanderesultado" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RunnerCrearPlantillas">
+  <component name="RunManager" selected="Gradle.RunnerCrearSorteo">
+    <configuration name="EjecutarRunnersUI (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="home.EjecutarRunnersUI" />
+      <module name="GeneradorDeSorteosVirutales.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="home.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EjecutarRunnersUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="home.EjecutarRunnersUI" />
       <module name="GeneradorDeSorteosVirutales.test" />
@@ -158,30 +172,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunnerConfiguracionParametros" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;runners.configuracionparametros.RunnerConfiguracionParametros&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="RunnerCrearPlantillas" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -196,6 +186,30 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;runners.creacionplantillas.RunnerCrearPlantillas&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="RunnerCrearSorteo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;runners.crearsorteo.RunnerCrearSorteo&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -230,22 +244,6 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RunnerConfiguracionParametros" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GeneradorDeSorteosVirutales.main" />
-      <shortenClasspath name="MANIFEST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="runners.configuracionparametros.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="runners.configuracionparametros" />
-      <option name="MAIN_CLASS_NAME" value="runners.configuracionparametros.RunnerConfiguracionParametros" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <shortenClasspath name="MANIFEST" />
       <option name="TEST_OBJECT" value="class" />
@@ -254,20 +252,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.EjecutarRunnersUI (1)" />
       <item itemvalue="Application.TestLauncher" />
       <item itemvalue="Application.EjecutarRunnersUI" />
       <item itemvalue="Gradle.RunnerProgramacionSorteo" />
+      <item itemvalue="Gradle.RunnerCrearSorteo" />
       <item itemvalue="Gradle.RunnerCrearPlantillas" />
-      <item itemvalue="Gradle.RunnerConfiguracionParametros" />
-      <item itemvalue="JUnit.RunnerConfiguracionParametros" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.RunnerCrearSorteo" />
+        <item itemvalue="Application.EjecutarRunnersUI (1)" />
         <item itemvalue="Gradle.RunnerCrearPlantillas" />
         <item itemvalue="Application.EjecutarRunnersUI" />
         <item itemvalue="Application.TestLauncher" />
-        <item itemvalue="Gradle.RunnerConfiguracionParametros" />
-        <item itemvalue="JUnit.RunnerConfiguracionParametros" />
       </list>
     </recent_temporary>
   </component>
@@ -302,7 +300,7 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/stepdefinition/crearsorteos/CrearSorteoStepDefinition.java</url>
-          <line>251</line>
+          <line>255</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint type="java-line">

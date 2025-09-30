@@ -37,12 +37,14 @@ public class CrearSorteoStepDefinition {
         String codigoUnico = GeneradorDatos.codigoUnico();
         String fechaActual = GeneradorDatos.fechaActual();
         String fechaInvalida = GeneradorDatos.fechaAnterior();
+        String fechaFutura = GeneradorDatos.fechaDosDiasFuturos();
 
 
         Serenity.setSessionVariable("nombreSorteo").to(nombreSorteo);
         Serenity.setSessionVariable("codigoUnico").to(codigoUnico);
         Serenity.setSessionVariable("fechaActual").to(fechaActual);
         Serenity.setSessionVariable("fechaInvalida").to(fechaInvalida);
+        Serenity.setSessionVariable("fechaFutura").to(fechaFutura);
     }
 
     private String valor(String input) {
@@ -55,6 +57,8 @@ public class CrearSorteoStepDefinition {
                 return Serenity.sessionVariableCalled("fechaActual");
             case "fechaInvalida":
                 return Serenity.sessionVariableCalled("fechaInvalida");
+            case "fechaFutura":
+                return Serenity.sessionVariableCalled("fechaFutura");
             default:
                 return input;
         }

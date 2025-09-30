@@ -64,6 +64,6 @@ Característica: Crear un sorteo en la plataforma GSV
 
     Ejemplos:
       | Empresa | Nombre de sorteo | Codigo unico     | Tipo de sorteo | Descripcion | Fecha de inicio | Fecha de fin | Mensaje                                                 |
-      | GELSA   | dinamico         | autoincremental  | SORTEO         | Prueba      | fechaActual     | fechaInvalida| La fecha final no puede ser menor que la fecha de inicio|
+      | GELSA   | dinamico         | autoincremental  | SORTEO         | Prueba      | fechaFutura     | fechaActual| La fecha final no puede ser menor que la fecha de inicio|
 
 
