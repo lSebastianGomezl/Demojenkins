@@ -1,9 +1,14 @@
 package home;
 
+import net.serenitybdd.cli.SerenityCLIReportCoordinator;
+import utils.GenerarReporteSerenity;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.io.File;
+
+
 
 public class EjecutarRunnersUI extends JFrame{
     private JComboBox<String> comboRunners;
@@ -33,7 +38,6 @@ public class EjecutarRunnersUI extends JFrame{
         JButton btnIniciar = new JButton("Iniciar");
         btnIniciar.setFont(fuente);
 
-        // Botón para ejecutar runner
         btnIniciar.addActionListener((ActionEvent e) -> {
             String seleccion = (String) comboRunners.getSelectedItem();
             if (seleccion == null || seleccion.equals("Seleccionar")) {
@@ -67,26 +71,36 @@ public class EjecutarRunnersUI extends JFrame{
             if (!clase.isEmpty()) {
                 String finalClase = clase;
 
-                // Deshabilitar botón mientras corre
                 btnIniciar.setEnabled(false);
                 comboRunners.setEnabled(false);
 
-                // Ejecutar gradlew en un hilo aparte
                 SwingWorker<Void, Void> worker = new SwingWorker<Void, Void>() {
                     @Override
                     protected Void doInBackground() {
                         try {
+                            // Ejecutar el runner
                             Class<?> runnerClass = Class.forName(finalClase);
-                            org.junit.runner.Result result = org.junit.runner.JUnitCore.runClasses(runnerClass);
+                            org.junit.runner.Result result =
+                                    org.junit.runner.JUnitCore.runClasses(runnerClass);
 
-                            result.getFailures().forEach(f -> {
-                                System.err.println("FALLA: " + f.toString());
-                            });
+                            result.getFailures().forEach(f ->
+                                    System.err.println("FALLA: " + f.toString()));
 
                             if (result.wasSuccessful()) {
-                                System.out.println(" Todas las pruebas pasaron para " + finalClase);
+                                System.out.println("Todas las pruebas pasaron para " + finalClase);
                             } else {
                                 System.err.println("Hubo fallas en " + finalClase);
+                            }
+
+                            // 🔹 Generar reportes Serenity siempre
+                            GenerarReporteSerenity.generar();
+
+                            // 🔹 Abrir el reporte en el navegador siempre
+                            File reporte = new File("target/site/serenity/index.html");
+                            if (reporte.exists()) {
+                                Desktop.getDesktop().browse(reporte.toURI());
+                            } else {
+                                System.err.println("No se encontró el reporte HTML en: " + reporte.getAbsolutePath());
                             }
 
                         } catch (Exception ex) {

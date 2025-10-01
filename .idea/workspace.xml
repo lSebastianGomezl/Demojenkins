@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c07d4157-c685-4ee3-8fcc-709ad059e0c4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/GeneradorDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/GeneradorDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/crearsorteo/RunnerCrearSorteo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/crearsorteo/RunnerCrearSorteo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinition/crearsorteos/CrearSorteoStepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinition/crearsorteos/CrearSorteoStepDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/crearsorteo/crearsorteo.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/crearsorteo/crearsorteo.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/home/EjecutarRunnersUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/home/EjecutarRunnersUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasks/login/ClicBtnConfirmarHuella.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasks/login/ClicBtnConfirmarHuella.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +137,7 @@
       <recent name="runners.configuracionplanderesultado" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RunnerCrearSorteo">
+  <component name="RunManager" selected="Gradle.RunnerCrearPlantillas">
     <configuration name="EjecutarRunnersUI (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="home.EjecutarRunnersUI" />
       <module name="GeneradorDeSorteosVirutales.main" />
@@ -261,9 +260,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.RunnerCrearPlantillas" />
         <item itemvalue="Gradle.RunnerCrearSorteo" />
         <item itemvalue="Application.EjecutarRunnersUI (1)" />
-        <item itemvalue="Gradle.RunnerCrearPlantillas" />
         <item itemvalue="Application.EjecutarRunnersUI" />
         <item itemvalue="Application.TestLauncher" />
       </list>

@@ -19,11 +19,22 @@ public class ClicBtnConfirmarHuella implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
+        int intento = 0;
 
-        actor.attemptsTo(
-                //WaitUntil.the(PaginaPrincipal.BTN_ACEPTAR_HUELLA, isNotVisible()).forNoMoreThan(60).seconds(),
-                Click.on(PaginaPrincipal.BTN_ACEPTAR_HUELLA)
-        );
+        while (intento < 5){
+            try {
+                actor.attemptsTo(
+                        WaitUntil.the(PaginaPrincipal.BTN_ACEPTAR_HUELLA, isNotVisible()).forNoMoreThan(10).seconds(),
+                        Click.on(PaginaPrincipal.BTN_ACEPTAR_HUELLA)
+                );
+                break;
+            }catch (Exception e){
+                e.printStackTrace();
+                System.out.println(e.getMessage());
+                intento++;
+            }
+
+        }
 
     }
 }
