@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c07d4157-c685-4ee3-8fcc-709ad059e0c4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/home/EjecutarRunnersUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/home/EjecutarRunnersUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tasks/login/ClicBtnConfirmarHuella.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasks/login/ClicBtnConfirmarHuella.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinition/hooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinition/hooks/Hooks.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +91,7 @@
     "Gradle.GeneradorDeSorteosVirtuales [:ui.RunnerInterface.main()].executor": "Run",
     "Gradle.LoginRunner (1).executor": "Run",
     "Gradle.LoginRunner.executor": "Run",
+    "Gradle.RunnerAprobadorProgramacionSorteos.executor": "Run",
     "Gradle.RunnerConfiguracionParametros.executor": "Run",
     "Gradle.RunnerCrearPlantillas.executor": "Run",
     "Gradle.RunnerCrearSorteo.executor": "Run",
@@ -109,7 +108,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/sebastian.gomez/OneDrive - GRUPO EMPRESARIAL EN LINEA S.A/Documentos/GeneradorDeSorteosVirtuales/src/test/resources/features/creacionplantillas",
+    "last_opened_file_path": "C:/Sqa",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.44312027",
@@ -118,11 +117,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\GeneradorDeSorteosVirtuales\src\test\resources\features\aprobarprogramacionsorteos" />
       <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\GeneradorDeSorteosVirtuales\src\test\resources\features\creacionplantillas" />
       <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\GeneradorDeSorteosVirtuales\src\test\resources\features\configuraciondeplanderesultadosbaloterasybalotas" />
       <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\GeneradorDeSorteosVirtuales\src\test\resources\features\creaciontipobalota" />
       <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\GeneradorDeSorteosVirtuales\src\test\resources\features\configuraciondeparametros" />
-      <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\GeneradorDeSorteosVirtuales\src\test\resources\features\programacionsorteos" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\Documentos\GeneradorDeSorteosVirtuales\src\main\resources" />
@@ -130,14 +129,14 @@
       <recent name="C:\Users\sebastian.gomez\OneDrive - GRUPO EMPRESARIAL EN LINEA S.A\BACK UP DISCO D\desk\FlutterWeb\DemoAppClientes\src\test\resources\features\login" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tasks.aprobarprogramacionsorteos" />
+      <recent name="questions.aprobarprogramacionsorteos" />
+      <recent name="runners.aprobarprogramacionsorteos" />
+      <recent name="stepdefinition.aprobarprogramacionsorteos" />
       <recent name="tasks.creacionplantillas" />
-      <recent name="stepdefinition.creacionpantillas" />
-      <recent name="runners.creacionplantillas" />
-      <recent name="tasks.configuracionplanderesultados" />
-      <recent name="runners.configuracionplanderesultado" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RunnerCrearPlantillas">
+  <component name="RunManager" selected="Gradle.RunnerAprobadorProgramacionSorteos">
     <configuration name="EjecutarRunnersUI (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="home.EjecutarRunnersUI" />
       <module name="GeneradorDeSorteosVirutales.main" />
@@ -164,12 +163,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TestLauncher" />
-      <module name="GeneradorDeSorteosVirutales.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="RunnerAprobadorProgramacionSorteos" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;runners.aprobarprogramacionsorteos.RunnerAprobadorProgramacionSorteos&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="RunnerCrearPlantillas" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -252,19 +268,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.EjecutarRunnersUI (1)" />
-      <item itemvalue="Application.TestLauncher" />
       <item itemvalue="Application.EjecutarRunnersUI" />
       <item itemvalue="Gradle.RunnerProgramacionSorteo" />
+      <item itemvalue="Gradle.RunnerAprobadorProgramacionSorteos" />
       <item itemvalue="Gradle.RunnerCrearSorteo" />
       <item itemvalue="Gradle.RunnerCrearPlantillas" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.RunnerAprobadorProgramacionSorteos" />
         <item itemvalue="Gradle.RunnerCrearPlantillas" />
         <item itemvalue="Gradle.RunnerCrearSorteo" />
         <item itemvalue="Application.EjecutarRunnersUI (1)" />
         <item itemvalue="Application.EjecutarRunnersUI" />
-        <item itemvalue="Application.TestLauncher" />
       </list>
     </recent_temporary>
   </component>
@@ -414,8 +430,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/tasks/crearsorteo/formulario/SeleccionarEmpresaTask.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="102" />
+          <line>30</line>
+          <option name="timeStamp" value="105" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

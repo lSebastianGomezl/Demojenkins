@@ -32,7 +32,9 @@ public class Hooks {
 
         if (isHeadless) {
             options.addArguments("--headless=new");
+            options.addArguments("--force-device-scale-factor=0.8");
             options.addArguments("--window-size=1920,1080");
+
         } else {
             options.addArguments("--start-maximized");
             //options.addArguments("--force-device-scale-factor=0.75");
@@ -46,7 +48,8 @@ public class Hooks {
                 "--ignore-certificate-errors",
                 "--allow-running-insecure-content",
                 "--disable-translate",
-                "--disable-extensions"
+                "--disable-extensions",
+                "--force-device-scale-factor=0.8"
         );
 
         hisBrowser = new ChromeDriver(options);
